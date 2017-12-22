@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated Dec 9, 2017 11:47:12 AM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="Hibernate.Entity.Item" table="item" catalog="customers" optimistic-lock="version">
+        <id name="idItem" type="string">
+            <column name="id_item" length="5" />
+            <generator class="assigned" />
+        </id>
+        <property name="nombre" type="string">
+            <column name="nombre" length="30" />
+        </property>
+        <property name="descripcion" type="string">
+            <column name="descripcion" length="100" />
+        </property>
+        <property name="precio" type="java.lang.Integer">
+            <column name="precio" />
+        </property>
+    </class>
+</hibernate-mapping>

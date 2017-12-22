@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated Dec 9, 2017 11:47:12 AM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="Hibernate.Entity.DetalleVenta" table="detalle_venta" catalog="customers" optimistic-lock="version">
+        <composite-id name="id" class="Hibernate.Entity.DetalleVentaId">
+            <key-property name="idCliente" type="int">
+                <column name="id_cliente" />
+            </key-property>
+            <key-property name="idFactura" type="int">
+                <column name="id_factura" />
+            </key-property>
+            <key-property name="idItem" type="string">
+                <column name="id_item" length="5" />
+            </key-property>
+        </composite-id>
+        <property name="cantidad" type="int">
+            <column name="cantidad" not-null="true" />
+        </property>
+        <property name="fecha" type="date">
+            <column name="fecha" length="10" />
+        </property>
+    </class>
+</hibernate-mapping>
