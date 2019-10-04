@@ -58,10 +58,39 @@ public class DolbyLinkList{
 
     }
 
-    public void deleteAtfirst(){
-        //Not finished yet
-        last = last.next;
-        last.prev=null;
-        
+    public void deleteFirst(){
+      Node tmp = first;
+      first = first.prev;
+      first.next=null;
+      tmp=null;
     }
+
+    public void deleteLast(){
+      Node tmp = last;
+      last = last.next;
+      last.prev=null;
+      tmp=null;
+    }
+
+    public void deleteAtIndex(Node n, int index){
+      Node tmp=last;
+      int cont=0;
+
+      while(cont<index){
+        tmp=tmp.next;
+        cont++;
+      }
+    }
+
+    public void printListRev(){
+      Node tmp=first;
+
+      while(tmp!=null)
+      {
+        System.out.println(tmp.name);
+        tmp=tmp.prev;
+      }
+    }
+
+
 }
